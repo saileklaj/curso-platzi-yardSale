@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-btn-menu pointer">
+            <img src="./icons/icon_menu.svg" alt="">
+            <div class=" mobile-menu menu-scroll inactive">
+                <ul>
+                    <li>
+                        <a href="/">CATEGORIES</a>
+                    </li>
+                    <li>
+                        <a href="/">All</a>
+                    </li>
+                    <li>
+                        <a href="/">Clothes</a>
+                    </li>
+                    <li>
+                        <a href="/">Electronics</a>
+                    </li>
+                    <li>
+                        <a href="/">Furnitures</a>
+                    </li>
+                    <li>
+                        <a href="/">Toys</a>
+                    </li>
+                    <li>
+                        <a href="/">Other</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a href="/">My orders</a>
+                    </li>
+                    <li>
+                        <a href="/">My account</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a href="/" class="mobile-menu-email">platzi@example.com</a>
+                    </li>
+                    <li  class="">
+                        <a href="/" class="mobile-menu-sign-out">Sign out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href=""><img src="./logos/logo_yard_sale.svg" alt="" class="nav-icon"></a>
+        <div class="nav-menu">
+            <div class="menu-filter">
+                <div><a href="#">All</a></div>
+                <div><a href="#">Clothes</a></div>
+                <div><a href="#">Electronics</a></div>
+                <div><a href="#">Furniture</a></div>
+                <div><a href="#">Toys</a></div>
+                <div><a href="#">Others</a></div>
+            </div>
+            <div class="nav-menu-perfil">
+                <a>
+                    <div>
+                        joseFonseca@gmail.com
+                    </div>
+                    <img src="./icons/flechita.svg" alt="" class="giro90">
+                </a>
+                <div class="desktop-menu inactive">
+                    <ul>
+                        <li><a href="#" class="title">My Orders</a></li>
+                        <li><a href="#" class="title">My Account</a></li>
+                        <li><a href="#" class="title">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <figure class="navbar-shopping-card pointer">
+            <img class="carrito" src="./icons/icon_shopping_cart.svg" alt="">
+            <div class="cantidad inactive"></div>
+        </figure>
+    </nav>
+    <!--desplegable carrito de compra-->
+    <aside class="product-detail">
+        <div class="to-shopping inactive">
+            <div class="title-container">
+                <img src="./icons/flechita.svg" alt="arrow">
+                <p class="title">My order</p>
+            </div>
+            <div class="container-shopping-list">
+                <div class="containerlist">
+                </div>
+                <div class="order">
+                    <p>
+                        <span>Total</span>
+                    </p>
+                    <p class="valortotal">$ </p>
+                </div>
+                <div class="product-detail-button">
+                    <button class="primary-button">
+                        Checkout
+                    </button>
+                </div>
+            </div>
+        </div>        
+    </aside>
+    <aside class="product-detail " id="padding0">
+        <div class="details-product inactive position-relative ">
+            <div class="product-detail-close">
+                <p>X</p>
+            </div>
+            <img id="img-detail-product">
+            <div class="product-card-info">
+                <p id="price-detail-product">$</p>
+                    <p id="product-value"></p>
+                    <p id="product-moneda"></p>
+                
+                <p id="name-detail-product"></p>
+                <p id="description-detail-product"></p>
+                <button class="primary-button add-to-cart-button">
+                    <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
+                    Add to cart
+                </button>
+            </div>
+        </div>
+    </aside>
+    
+    <section class="main-container">
+        <div class="search-container">
+            <div class="input-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" class="search-input" placeholder="Search product">
+            </div>
+            <div class="order-by-container">
+                <label for="order">Order: </label>
+                <input type="text" name="" id="order" placeholder="Most recent">
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+        <div class="cards-container">
+            <!--
+                contenido generado desde main.js funcion productList
+            -->
+        </div>
+    </section>
+
+    <script src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/650603894d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
