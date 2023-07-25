@@ -1,0 +1,225 @@
+/** Clases de navbar*/
+.nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 8px 32px 0 32px;
+    border-bottom: 1px solid var(--very-light-pink);
+    background-color: #EDF5F2;
+}
+/** Boton hamburguesa izquierdo*/
+.nav-btn-menu {
+    display: none;
+}
+/** Clases Menu desplegable (Movile)*/
+.mobile-menu {
+    z-index: 2;
+    background-color: var(--white);
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding: 0 24px;
+    height: 100vh;
+}
+
+.mobile-menu a {
+    padding: 12px 0;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    /* margin-bottom: 24px; */
+}
+
+.mobile-menu ul {
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+}
+
+.mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+.mobile-menu ul li {
+    margin-bottom: 5px;
+}
+
+.mobile-menu-email {
+    font-size: var(--sm);
+    font-weight: 300 !important;
+}
+
+.mobile-menu-sign-out {
+    font-size: var(--sm);
+    color: var(--hospital-green) !important;
+}
+
+/** Imagen(Icono) aplicacion*/
+.nav-icon {
+    width: 120px;
+}
+
+/** Contenedor menu categorias y menu perfil*/
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+/** Menu categorias*/
+.menu-filter {
+    display: flex;
+    flex-direction: row;
+    margin: 12px 16px;
+}
+
+.menu-filter div a {
+    border: 1px solid #EDF5F2;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--very-light-pink);
+}
+
+.menu-filter div a:hover {
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+    border-radius: 8px;
+}
+
+/*Clases menu perfil*/
+.nav-menu-perfil {
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-menu-perfil a {
+    padding: 12px;
+    text-decoration: none;
+    color: var(--very-light-pink);
+}
+
+.nav-menu-perfil>a {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-menu-perfil a img {
+    margin-left: 15px;
+    width: 5px;
+}
+
+/*Clases menu desplegable desktop*/
+.desktop-menu {
+    z-index: 2;
+    background-color: var(--white);
+    position: absolute;
+    width: 80%;
+    right: 0;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 4px;
+}
+
+.desktop-menu ul {
+    list-style: none;
+    text-align: end;
+}
+
+.desktop-menu ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    padding: 12px;
+}
+
+.desktop-menu ul li a {
+    /* align-items: end; */
+    color: var(--black);
+    font-weight: bold;
+}
+
+.desktop-menu ul li:last-child {
+    padding-top: 30px;
+    border-top: 1px solid var(--very-light-pink);
+}
+
+.desktop-menu ul li:last-child a {
+    color: var(--hospital-green);
+}
+/*Clases navbar/navbar-shopping-card*/
+.navbar-shopping-card {
+    position: relative;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+/*Clases navbar/navbar-shopping-card*/
+.navbar-shopping-card div {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    font-size: 12px;
+    background-color: var(--hospital-green);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--white);
+}
+
+
+@media (max-width:640px) {
+    .nav {
+        place-items: center;
+    }
+
+    .nav-btn-menu {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .menu-filter {
+        display: none;
+    }
+    .navbar-shopping-card {
+        margin: 0;
+    }
+
+    .mobile-menu ul:nth-child(2) {
+        display: block;
+    }
+
+    .mobile-menu ul:nth-child(3) {
+        display: block;
+    }
+}
+
+@media (min-width:640px) and (max-width:1030px) {
+    .nav {
+        grid-template-columns: auto 1fr auto auto;
+    }
+
+    .nav>a {
+        margin-left: 40px;
+    }
+
+    .nav-btn-menu {
+        display: block;
+    }
+    .menu-filter {
+        display: none;
+    }
+
+    .mobile-menu ul:nth-child(2) {
+        display: none;
+    }
+
+    .mobile-menu ul:nth-child(3) {
+        display: none;
+    }
+}
